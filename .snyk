@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.3
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:lodash:20180130':
@@ -10,4 +10,22 @@ ignore:
     - '@evolvus/evolvus-file-upload > standard-version > yargs > os-locale > mem':
         reason: None given
         expires: '2018-10-03T09:33:41.057Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-AXIOS-174505:
+    - axios:
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-contact > @evolvus/evolvus-swe-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-node-health-check > evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-role > @evolvus/evolvus-application > @evolvus/evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-contact > @evolvus/evolvus-node-health-check > evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-entity > @evolvus/evolvus-contact > @evolvus/evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-contact > @evolvus/evolvus-node-health-check > evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-entity > @evolvus/evolvus-contact > @evolvus/evolvus-node-health-check > evolvus-docket-client > axios':
+        patched: '2019-05-06T05:32:46.207Z'
