@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:lodash:20180130':
@@ -10,4 +10,22 @@ ignore:
     - '@evolvus/evolvus-file-upload > standard-version > yargs > os-locale > mem':
         reason: None given
         expires: '2018-10-03T09:33:41.057Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@evolvus/evolvus-role > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-role > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-role > @evolvus/evolvus-menu > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-user > @evolvus/evolvus-entity > @evolvus/evolvus-contact > @evolvus/evolvus-node-health-check > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-file-upload > standard-version > conventional-recommended-bump > conventional-commits-parser > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-file-upload > standard-version > conventional-changelog > conventional-changelog-core > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-file-upload > standard-version > conventional-changelog > conventional-changelog-core > conventional-changelog-writer > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
+    - '@evolvus/evolvus-file-upload > standard-version > conventional-changelog > conventional-changelog-core > conventional-commits-parser > lodash':
+        patched: '2020-05-01T05:33:32.702Z'
